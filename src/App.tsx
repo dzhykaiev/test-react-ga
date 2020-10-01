@@ -1,6 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+import ReactGA from 'react-ga';
 import './App.css';
+import logo from './logo.svg';
+
+const trackingId = "UA-179443594-1"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
 
 function App() {
   return (
