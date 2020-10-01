@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import './App.css';
 import logo from './logo.svg';
 
-const trackingId = "UA-179443594-1"; // Replace with your Google Analytics tracking ID
-ReactGA.initialize(trackingId);
-
 function App() {
+  useEffect(() => { ReactGA.initialize("UA-179443594-1"); }, []);
+
   return (
     <div className="App">
       <header className="App-header">
