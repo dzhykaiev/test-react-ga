@@ -3,9 +3,12 @@ import ReactGA from 'react-ga';
 import './App.css';
 import logo from './logo.svg';
 
-function App() {
-  useEffect(() => { ReactGA.initialize("UA-179443594-1"); }, []);
+ReactGA.initialize("UA-179443594-1");
 
+function App() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
   return (
     <div className="App">
       <header className="App-header">
